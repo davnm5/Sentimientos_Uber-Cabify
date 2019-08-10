@@ -10,13 +10,16 @@ auth = tweepy.OAuthHandler(consumer_key,  consumer_secret)
 auth.set_access_token(access_token, access_token_secret)
 api = tweepy.API(auth)
 
-tweets = tweepy.Cursor(api.search, q="cabify", lang ="es", geocode = mex,tweet_mode='extended').items(4)
+tweets = tweepy.Cursor(api.search, q="@Cabify_Mexico", lang ="es", geocode = mex,tweet_mode='extended').items(5000)
 
 
-with open('tweets.csv', 'a') as f:
+with open('tweets.csv', 'w+') as f:
     f.write("tweets,app\n")
-    cont = "uber" 
     for tweet in tweets:
-        f.write(tweet.full_text+"\n")
-        
+        status = api.get_status(tweet.id, tweet_mode="extended")
+        try:
+            f.write(status.retweeted_status.full_text+"\n")
+           
+        except AttributeError:  # Not a Retweet
+            f.write(status.full_text+"\n")   
     f.close()
