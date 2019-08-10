@@ -14,19 +14,24 @@ access_token  = '1159586127512317952-KnrBcec1geGVS9faGpQMAFJ4lXW1q7'
 access_token_secret = 'GKeHXjDXQRWERGR5N3w0QrNBtj2vXWOu3wYgNSnu6a6E0'
 auth = tweepy.OAuthHandler(consumer_key,  consumer_secret)
 auth.set_access_token(access_token, access_token_secret)
-api = tweepy.API(auth)
-
-tweets = tweepy.Cursor(api.search, q="@Cabify_Mexico", lang ="es",tweet_mode='extended').items(1000)
+api = tweepy.API(auth,wait_on_rate_limit=True)
 
 
-with open('tweets.csv', 'w+') as f:
-    f.write("tweets,app\n")
-    for tweet in tweets:
-        status = api.get_status(tweet.id, tweet_mode="extended")
-        try:
-            f.write(remove_emoji(p.clean(status.retweeted_status.full_text))+"\n")
-           
-        except AttributeError:
-            f.write(remove_emoji(p.clean(status.full_text))+"\n")   
-    f.close()
 
+def get_tweets(archivo,keywords):
+    tweets = tweepy.Cursor(api.search, q=keywords, lang ="es",tweet_mode='extended').items(1000)
+
+
+    with open(archivo, 'w+') as f:
+        for tweet in tweets:
+            status = api.get_status(tweet.id, tweet_mode="extended")
+            try:
+                f.write(remove_emoji(p.clean(status.retweeted_status.full_text))+"\n")
+            
+            except AttributeError:
+                f.write(remove_emoji(p.clean(status.full_text))+"\n")   
+        f.close()
+
+
+get_tweets("tweets_cabify.csv","@Cabify_Mexico")
+get_tweets("tweets_uber.csv","@Uber_MEX")
