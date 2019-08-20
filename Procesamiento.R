@@ -1,6 +1,7 @@
 library(tidyverse)
 library(tidytext)
-
+library(tm)
+library(dplyr)
 
 download.file("https://raw.githubusercontent.com/jboscomendoza/rpubs/master/sentimientos_afinn/lexico_afinn.en.es.csv","lexico_afinn.en.es.csv")
 afinn <- read.csv("lexico_afinn.en.es.csv", stringsAsFactors = F, fileEncoding = "latin1") %>% tbl_df()
@@ -18,6 +19,11 @@ tuits$tuits <- gsub("#\\w+","",tuits$tuits)
 tuits$tuits <- gsub("@\\w+","",tuits$tuits)
 tuits$tuits <- gsub("[[:punct:]]","",tuits$tuits)
 tuits$tuits <- gsub("\\w*[0-9]+\\w*\\s*", "",tuits$tuits)
+tuits$tuits= tolower(tuits$tuits)
+tuits$tuits= removeWords(tuits$tuits, words = stopwords("spanish"))
+tuits$tuits <- removePunctuation(tuits$tuits)
+tuits$tuits <- stripWhitespace(tuits$tuits)
+tuits$tuits <- gsub(" *\\b[[:alpha:]]{1,2}\\b *", " ", tuits$tuits)
 
 tuits_afinn <- 
   tuits %>%
