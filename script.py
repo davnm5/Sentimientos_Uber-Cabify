@@ -39,11 +39,6 @@ def get_tweets(datos,zona):
 def init():
     file=open("data.csv")
     file.readline().strip()
-    file.readline().strip()
-    file.readline().strip()
-    file.readline().strip()
-    file.readline().strip()
-    file.readline().strip()
 
     for i in file:
         lista=i.strip().split(',')
