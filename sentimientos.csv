@@ -284,8 +284,8 @@ asombroso,4,amazing
 asombroso,3,astounding
 asombroso,5,breathtaking
 asqueroso,-3,disgusting
-asqueroso,-3,nasty
-asqueroso,-2,yucky
+asquerosos,-3,nasty
+asquerosidad,-3,nasty
 assfucking,-4,assfucking
 astucia,-2,trickery
 astuto,-2,dodgy
@@ -464,7 +464,8 @@ censurar,-2,censor
 ceñudo,-1,frowning
 cernía,-1,loomed
 cerveza negra,2,stout
-chagrined,-2,chagrined
+chingar,-5,blank
+chingados,-5,blank
 chiflado por,2,infatuated
 chispa,1,spark
 chistes,2,jokes
@@ -1246,7 +1247,8 @@ glamour,3,glamourous
 gloria,2,glory
 glorioso,2,glorious
 golpe,-2,slam
-golpeado,-1,struck
+golpeado,-3,struck
+golpear,-3,struck
 gorrón,-2,bummer
 gracia,1,grace
 gracias,2,thank
@@ -1458,6 +1460,8 @@ insultado,-2,insulted
 insultante,-2,insulting
 insulto,-2,insult
 insultos,-2,insults
+insultar,-3,insults
+insultando,-3,insults
 intacto,2,intact
 integridad,2,integrity
 inteligente,2,clever
@@ -1601,12 +1605,10 @@ mal comportamiento,-2,misbehaving
 mal humor,-2,sulking
 mal informado,-2,misinformed
 maldición,-1,curse
-maldición,-4,damnit
-Maldita sea,-4,damn
-maldito,-4,damned
+maldecido,-4,damnit
+maldita sea,-4,damn
 maldito,-4,fucking
-maldito,-3,goddamn
-maldito,-2,pesky
+malditos,-5,pesky
 malentendido,-2,misunderstanding
 males,-1,mischiefs
 malévolo,-2,spiteful
@@ -1645,7 +1647,8 @@ más pobre,-2,poorest
 más resistentes,2,hardier
 más sucio,-2,dirtier
 más sucio,-2,dirtiest
-matar,-3,kill
+matar,-5,kill
+mata,-5,kill
 matón,-2,bully
 mayor,3,greater
 mayor,3,greatest
@@ -1744,7 +1747,6 @@ nervioso,-2,nervous
 niebla tóxica,-2,smog
 niega,-2,denies
 Niggas,-5,niggas
-no,-1,no
 no amable,-2,unlovable
 no aprobado,-2,unapproved
 no creer,-2,disbelieve
@@ -1753,6 +1755,8 @@ no es divertido,-3,no fun
 no está bien,-2,not good
 no funciona,-3,does not work
 no funciona,-3,not working
+no sirve,-3,not working
+no sirven para nada,-5,not working
 no profesional,-2,unprofessional
 no puede soportar,-3,can't stand
 no sofisticado,-2,unsophisticated
@@ -1911,10 +1915,10 @@ poderoso,2,powerful
 polémica,-2,controversially
 polémico,-2,controversial
 polla,-5,cock
-polla,-4,dick
 popular,3,popular
 Por favor,1,please
 por suerte,3,luckily
+porquería,-5,blank
 porta mal,-2,misbehaves
 portado mal,-2,misbehaved
 portarse mal,-2,misbehave
@@ -1986,7 +1990,7 @@ puñalada,-4,stab
 puñaladas,-4,stabs
 pusilánime,-2,fainthearted
 puta,-5,slut
-puta,-4,whore
+putas,-5,whore
 puto,-5,motherfucking
 que cae,-1,falling
 quejado,-2,complained
@@ -2110,19 +2114,15 @@ risa,1,laugh
 risa,1,laughing
 risas,1,laughs
 robado,-2,stolen
-robar,-2,rob
-robar,-2,steal
-robing,-2,robing
-robos,-2,steals
-robs,-2,robs
+robar,-3,rob
+robo,-3,steal
+robaron,-3,rob
+robing,-2,rob
+robos,-2,rob
+robó,-2,rob
 robusto,2,robust
-rofl,4,rofl
-roflmao,4,roflmao
 romance,2,romance
 rompió,-1,broke
-rotfl,4,rotfl
-rotflmfao,4,rotflmfao
-ROTFLOL,4,rotflol
 roto,-1,broken
 rudo,-3,badass
 ruidoso,-1,noisy
@@ -2408,7 +2408,7 @@ veredicto,-1,verdict
 veredictos,-1,verdicts
 vergonzoso,-2,shameful
 vergüenza,-2,embarrassment
-vergüenza,-2,shame
+vergüenzas,-2,shame
 vestíbulo,-2,lobby
 vibrante,3,vibrant
 vicioso,-2,vicious
