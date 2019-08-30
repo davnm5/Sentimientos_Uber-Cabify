@@ -1,8 +1,14 @@
 import tweepy
 import preprocessor as p
 import emoji
-
+from geopy.geocoders import Nominatim
 p.set_options(p.OPT.URL, p.OPT.EMOJI, p.OPT.SMILEY)
+
+def get_coord(zona):
+    geolocator = Nominatim(user_agent="Sentimientos Uber-Cabify")
+    geo = geolocator.geocode(zona)
+    return (geo.latitude, geo.longitude)
+
 
 def remove_emoji(text):
     return emoji.get_emoji_regexp().sub(r'', text)
@@ -17,21 +23,30 @@ auth.set_access_token(access_token, access_token_secret)
 api = tweepy.API(auth,wait_on_rate_limit=True)
 
 
-
-def get_tweets(archivo,keywords):
-    tweets = tweepy.Cursor(api.search, q=keywords, lang ="es",tweet_mode='extended').items(1000)
-
-
-    with open(archivo, 'w+') as f:
+def get_tweets(datos,zona):
+    tweets = tweepy.Cursor(api.search, q=datos[1], geocode=str(zona[0])+","+str(zona[1])+","+str(datos[3]), lang ="es",tweet_mode='extended').items(200)
+    with open(datos[0], 'w+') as f:
         for tweet in tweets:
-            status = api.get_status(tweet.id, tweet_mode="extended")
+            status = api.get_status(tweet.id,tweet_mode="extended")
             try:
                 f.write(remove_emoji(p.clean(status.retweeted_status.full_text))+"\n")
             
             except AttributeError:
-                f.write(remove_emoji(p.clean(status.full_text))+"\n")   
+                f.write(remove_emoji(p.clean(status.full_text))+"\n")
         f.close()
 
 
-get_tweets("tweets_cabify.csv","@Cabify_Mexico")
-get_tweets("tweets_uber.csv","@Uber_MEX")
+def init():
+    file=open("data.csv")
+    file.readline().strip()
+    file.readline().strip()
+    file.readline().strip()
+    file.readline().strip()
+    file.readline().strip()
+    file.readline().strip()
+
+    for i in file:
+        lista=i.strip().split(',')
+        get_tweets(lista,get_coord(lista[2]))
+
+init()
