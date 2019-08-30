@@ -389,6 +389,7 @@ brillo,1,brightness
 broma,2,joke
 bruto,-2,gross
 bueno,3,good
+buen servicio,4,good
 buque insignia,2,flagship
 bureado,-2,tricked
 burla,-2,derision
@@ -637,6 +638,7 @@ dañar,-3,damage
 daño,-2,harm
 daño,-2,hurting
 daños,-2,harms
+dan asco,-5,disgust
 daños y perjuicios,-3,damages
 de acuerdo,1,agree
 de buen tono,3,classy
@@ -981,6 +983,7 @@ errores,-2,errors
 errores,-2,mistakes
 erupción,-2,rash
 es una pena,-2,ashame
+espectacular,5,awesome
 escalofriante,-1,chilling
 escándalo,-3,scandal
 escándalos,-3,scandals
@@ -1723,6 +1726,7 @@ multa,2,fine
 muriendo de hambre,-2,starving
 murió,-3,died
 musaraña,-4,shrew
+muy bueno,4,very good
 n00b,-2,n00b
 natural,1,natural
 necesitado,-2,needy
