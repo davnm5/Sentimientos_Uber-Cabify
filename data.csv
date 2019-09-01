@@ -1,7 +1,0 @@
-archivo,cuenta,ciudad,superficie
-tweets/uber_ciudadMexico.csv,@Uber_MEX,Mexico,1485km
-tweets/uber_monterrey.csv,@Uber_MEX,Monterrey,894km
-tweets/uber_bogota.csv,@Uber_Col,Bogota,1775km
-tweets/cabify_bogota.csv,@cabify_colombia,Bogota,619km
-tweets/uber_colombia.csv,@Uber_Col,Colombia,50000km
-tweets/cabify_mexico.csv,@Cabify_Mexico,Mexico,50000km

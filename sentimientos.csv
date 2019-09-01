@@ -28,6 +28,7 @@ aburrido,-2,dull
 aburrir,-2,bore
 abusado,-3,abused
 abusivo,-3,abusive
+abusivos,-3,abusive
 abuso,-3,abuse
 abusos,-3,abuses
 acaparador,-2,profiteer
@@ -515,6 +516,7 @@ cometer,1,commit
 comodidad,2,comfort
 comodidad,2,coziness
 comodidades,2,comforts
+cómodos,2,comfortable
 cómodo,2,comfortable
 compadecimos,-1,pitied
 Comparte,1,shares
@@ -639,6 +641,7 @@ daño,-2,harm
 daño,-2,hurting
 daños,-2,harms
 dan asco,-5,disgust
+da asco,-5,disgust
 daños y perjuicios,-3,damages
 de acuerdo,1,agree
 de buen tono,3,classy
@@ -646,6 +649,10 @@ de confianza,2,trusted
 de miedo,-2,scary
 de mierda,-3,shitty
 de poco mérito,-2,undeserving
+debería,-1,blank
+deben,-1,blank
+debieron,-1,blank
+deberían,-1,blank
 débil,-2,feeble
 débiles,-2,weak
 debilidad,-2,weakness
@@ -657,6 +664,7 @@ decepcionante,-2,disappointing
 decepcionar,-2,disappoint
 decepciones,-2,disappointments
 decir ah,2,ha
+decirme,-1,blank
 decisivo,1,decisive
 dedicado,2,dedicated
 defecto,-3,defect
@@ -670,8 +678,6 @@ defraudadores,-4,fraudsters
 degradado,-2,degraded
 degradar,-2,degrade
 dejar,-1,leave
-dejecting,-2,dejecting
-dejects,-2,dejects
 delanteros,-2,strikers
 deleitando,3,delighting
 deleite,3,delight
@@ -1075,6 +1081,7 @@ exasperada,2,exasperated
 exasperante,-2,infuriating
 excelencia,3,excellence
 excelente,3,excellent
+excelentes,3,excellent
 excepcional,5,outstanding
 exceso de peso,-1,overweight
 excitar,3,excite
@@ -1134,7 +1141,7 @@ falsificado,-3,falsified
 falsificar,-3,falsify
 falso,-2,dud
 falso,-3,fake
-falta de respeto,-2,disrespect
+falta respeto,-2,disrespect
 fama,1,fame
 famélico,-2,starved
 fanático,-2,zealot
@@ -1208,7 +1215,6 @@ frustrante,-2,frustrating
 frustrar,-2,frustrate
 frustrar,-2,thwart
 frustrar,-2,thwarting
-ftw,3,ftw
 Fuckface,-4,fuckface
 fuckhead,-4,fuckhead
 fuego,-2,fire
@@ -1221,6 +1227,7 @@ fumante,-2,fuming
 funeral,-1,funeral
 funerales,-1,funerals
 furioso,-3,furious
+furiosos,-3,furious
 furtivo,-1,sneaky
 fútil,2,futile
 galante,3,gallant
@@ -1255,6 +1262,9 @@ golpear,-3,struck
 gorrón,-2,bummer
 gracia,1,grace
 gracias,2,thank
+grosero,-3,blank
+groserias,-3,blank
+groseros,-3,blank
 Gracias,2,thanks
 gracioso,4,funny
 grande,1,big
@@ -1311,7 +1321,6 @@ honor,2,honor
 honor,2,honour
 honrado,2,honored
 honrado,2,honoured
-hooligans,-2,hooligans
 horrendo,-3,horrendous
 horrendo,-3,horrific
 horrible,-3,awful
@@ -1330,6 +1339,9 @@ humor,2,humour
 humorístico,2,humorous
 Hurra,5,hurrah
 huye,-1,flees
+huyó,-3,fless
+huir,-3,fless
+hijueputa,-4,blank
 idiota,-3,idiot
 idiota,-3,idiotic
 idiota,-3,moron
@@ -1378,7 +1390,7 @@ incapacitado,-2,incapacitated
 incapacitante,-1,disabling
 incapaz,-2,incapable
 incierto,-1,uncertain
-incómodo,-2,uncomfortable
+incómodo,-4,uncomfortable
 incompetencia,-2,incompetence
 incompetente,-2,incompetent
 incomprendido,-2,misunderstood
@@ -1571,7 +1583,7 @@ litigioso,-2,litigious
 lívido,-2,livid
 llanto,-2,weeping
 llantos,-2,cries
-llegar,1,reaching
+llegar,0,reaching
 lleno de alegría,4,overjoyed
 lleno de savia,-1,sappy
 llorado,-2,cried
@@ -1619,6 +1631,7 @@ malhumorado,-2,mumpish
 malhumorado,-2,sulky
 malinterpretado,-2,misinterpreted
 malo,-3,bad
+malos,-3,bad
 malvado,-2,wicked
 mancha,2,slick
 manifestantes,-2,protesters
@@ -1727,6 +1740,7 @@ muriendo de hambre,-2,starving
 murió,-3,died
 musaraña,-4,shrew
 muy bueno,4,very good
+buenos,2,good
 n00b,-2,n00b
 natural,1,natural
 necesitado,-2,needy
@@ -1901,7 +1915,7 @@ perturbado,-2,perturbed
 perturbador,-2,disturbing
 pesimismo,-2,pessimism
 pesimista,-2,pessimistic
-pésimo,-2,appalling
+pésimo,-4,appalling
 petrificado,-2,petrified
 picado,-2,piqued
 picante,-2,itchy
@@ -2070,6 +2084,8 @@ resolver,1,solve
 respalda,2,endorses
 Respaldados,1,backed
 respetado,2,respected
+respeto,-2,blank
+respetar,-1,blank
 responsable,2,responsible
 restauración,1,restoring
 restauraciones,1,restores
@@ -2192,6 +2208,8 @@ simpatía,2,sympathy
 simpático,2,sympathetic
 simplificada,-2,oversimplified
 simplificar demasiado,-2,oversimplify
+demasiados,-1,over
+demasiado,-1,over
 sin acreditar,-1,uncredited
 sin amor,-2,unloved
 sin ánimo,-2,spiritless
@@ -2313,18 +2331,15 @@ terror,-3,terror
 tesoro,2,treasure
 tesoros,2,treasures
 tetas,-2,tits
-tiempo,-2,tense
+tiempo,0,tense
 tímido,-2,diffident
 tímido,-1,shy
 tímido,-2,timid
 timorato,-2,timorous
-tipo,2,kind
+tipo,0,kind
 tolerante,2,tolerant
 toma de posesión,-2,swearing
 tonto,-3,dumb
-tonto,-2,fool
-tonto,-2,foolish
-tonto,-1,silly
 tontos,-2,fools
 torpe,-2,awkward
 tortura,-4,torture
@@ -2383,6 +2398,7 @@ unirse,1,join
 urgente,-1,urgent
 útil,2,useful
 utilidad,2,usefulness
+urgente,-2,blank
 vacilante,-2,hesitant
 vacilante,-1,wavering
 vacilar,-2,hesitate
@@ -2438,6 +2454,7 @@ violar,-2,violate
 violar,-2,violating
 violencia,-3,violence
 violento,-3,violent
+violación,-4,violent
 virtuoso,2,virtuous
 virulento,-2,virulent
 visión,1,vision
@@ -2457,6 +2474,7 @@ WINWIN,3,winwin
 woohoo,3,woohoo
 wooo,4,wooo
 woow,4,woow
+wow,4,wow
 wOWOW,4,wowow
 wowww,4,wowww
 wtf,-2,wtf

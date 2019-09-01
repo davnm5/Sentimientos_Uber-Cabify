@@ -1,0 +1,7 @@
+c=c("archivo1","archivo2")
+valor=list("a","b")
+contador=0
+for (i in c){
+  contador=contador+1
+  print(valor[[contador]])
+}

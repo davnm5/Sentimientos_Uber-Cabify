@@ -4,10 +4,16 @@ library(tm)
 library(dplyr)
 
 download.file("https://raw.githubusercontent.com/davnm5/Sentimientos_Uber-Cabify/master/sentimientos.csv?token=AGAFQW7UAEOB7EHL7SC7GAK5OK77W","sentimientos.csv")
-afinn <- read.csv("sentimientos.csv", stringsAsFactors = F, fileEncoding = "latin1") %>% tbl_df()
+afinn <- read.csv("sentimientos.csv", stringsAsFactors = F, fileEncoding = "utf-8") %>% tbl_df()
 
-tuits <- read_csv2(file.choose(), quote = "\"", col_names = FALSE) %>% tbl_df()
-
+archivos=read.csv("config/config.csv")
+ubicacion=archivos$ubicacion
+app=archivos$app
+contador=0
+t=data.frame(ubicacion=c("--"),positivos=c("--"),negativos=c("--"),neutros=c("--"),app=c("--"))
+write.table(t,"output/output.csv",quote=FALSE,row.names = FALSE,col.names = TRUE,append = FALSE,sep=",")
+for (i in archivos$archivo){
+tuits <- read_csv2(i, quote = "\"", col_names = FALSE) %>% tbl_df()
 names(tuits) <-c("tuits")
 
 tuits <- tibble::rowid_to_column(tuits, "ID")
@@ -40,6 +46,10 @@ tuits$Puntuacion_tuit <- round(tuits$Puntuacion_tuit)
 total_negativas=sum(tuits$Puntuacion_tuit<0)
 total_positivas=sum(tuits$Puntuacion_tuit>0)
 total_neutras=sum(tuits$Puntuacion_tuit==0)
-print(total_positivas)
-print(total_negativas)
-print(total_neutras)
+contador=contador+1
+aux=data.frame(ubicacion=ubicacion[contador],positivos=c(total_positivas),negativos=c(total_negativas),neutros=c(total_neutras),app=app[contador])
+write.table(aux,"output/output.csv",quote=FALSE,row.names = FALSE,col.names = FALSE,append = TRUE,sep=",")
+}
+
+
+
