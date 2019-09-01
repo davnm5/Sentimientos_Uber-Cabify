@@ -639,6 +639,7 @@ daño,-2,harm
 daño,-2,hurting
 daños,-2,harms
 dan asco,-5,disgust
+da asco,-5,disgust
 daños y perjuicios,-3,damages
 de acuerdo,1,agree
 de buen tono,3,classy
@@ -646,6 +647,10 @@ de confianza,2,trusted
 de miedo,-2,scary
 de mierda,-3,shitty
 de poco mérito,-2,undeserving
+debería,-1,blank
+deben,-1,blank
+debieron,-1,blank
+deberían,-1,blank
 débil,-2,feeble
 débiles,-2,weak
 debilidad,-2,weakness
@@ -657,6 +662,7 @@ decepcionante,-2,disappointing
 decepcionar,-2,disappoint
 decepciones,-2,disappointments
 decir ah,2,ha
+decirme,-1,blank
 decisivo,1,decisive
 dedicado,2,dedicated
 defecto,-3,defect
@@ -670,8 +676,6 @@ defraudadores,-4,fraudsters
 degradado,-2,degraded
 degradar,-2,degrade
 dejar,-1,leave
-dejecting,-2,dejecting
-dejects,-2,dejects
 delanteros,-2,strikers
 deleitando,3,delighting
 deleite,3,delight
