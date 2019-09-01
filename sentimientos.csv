@@ -1138,7 +1138,7 @@ falsificado,-3,falsified
 falsificar,-3,falsify
 falso,-2,dud
 falso,-3,fake
-falta de respeto,-2,disrespect
+falta respeto,-2,disrespect
 fama,1,fame
 famélico,-2,starved
 fanático,-2,zealot
@@ -1386,7 +1386,7 @@ incapacitado,-2,incapacitated
 incapacitante,-1,disabling
 incapaz,-2,incapable
 incierto,-1,uncertain
-incómodo,-2,uncomfortable
+incómodo,-4,uncomfortable
 incompetencia,-2,incompetence
 incompetente,-2,incompetent
 incomprendido,-2,misunderstood
@@ -1909,7 +1909,7 @@ perturbado,-2,perturbed
 perturbador,-2,disturbing
 pesimismo,-2,pessimism
 pesimista,-2,pessimistic
-pésimo,-2,appalling
+pésimo,-4,appalling
 petrificado,-2,petrified
 picado,-2,piqued
 picante,-2,itchy
@@ -2078,6 +2078,8 @@ resolver,1,solve
 respalda,2,endorses
 Respaldados,1,backed
 respetado,2,respected
+respeto,-2,blank
+respetar,-1,blank
 responsable,2,responsible
 restauración,1,restoring
 restauraciones,1,restores
