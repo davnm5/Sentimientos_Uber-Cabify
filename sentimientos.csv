@@ -1208,7 +1208,6 @@ frustrante,-2,frustrating
 frustrar,-2,frustrate
 frustrar,-2,thwart
 frustrar,-2,thwarting
-ftw,3,ftw
 Fuckface,-4,fuckface
 fuckhead,-4,fuckhead
 fuego,-2,fire
@@ -1255,6 +1254,9 @@ golpear,-3,struck
 gorrón,-2,bummer
 gracia,1,grace
 gracias,2,thank
+grosero,-3,blank
+groserias,-3,blank
+groseros,-3,blank
 Gracias,2,thanks
 gracioso,4,funny
 grande,1,big
@@ -1311,7 +1313,6 @@ honor,2,honor
 honor,2,honour
 honrado,2,honored
 honrado,2,honoured
-hooligans,-2,hooligans
 horrendo,-3,horrendous
 horrendo,-3,horrific
 horrible,-3,awful
@@ -1330,6 +1331,9 @@ humor,2,humour
 humorístico,2,humorous
 Hurra,5,hurrah
 huye,-1,flees
+huyó,-3,fless
+huir,-3,fless
+hijueputa,-4,blank
 idiota,-3,idiot
 idiota,-3,idiotic
 idiota,-3,moron
@@ -2383,6 +2387,7 @@ unirse,1,join
 urgente,-1,urgent
 útil,2,useful
 utilidad,2,usefulness
+urgente,-2,blank
 vacilante,-2,hesitant
 vacilante,-1,wavering
 vacilar,-2,hesitate
@@ -2438,6 +2443,7 @@ violar,-2,violate
 violar,-2,violating
 violencia,-3,violence
 violento,-3,violent
+violación
 virtuoso,2,virtuous
 virulento,-2,virulent
 visión,1,vision
@@ -2457,6 +2463,7 @@ WINWIN,3,winwin
 woohoo,3,woohoo
 wooo,4,wooo
 woow,4,woow
+wow,4,wow
 wOWOW,4,wowow
 wowww,4,wowww
 wtf,-2,wtf
