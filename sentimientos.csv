@@ -28,6 +28,7 @@ aburrido,-2,dull
 aburrir,-2,bore
 abusado,-3,abused
 abusivo,-3,abusive
+abusivos,-3,abusive
 abuso,-3,abuse
 abusos,-3,abuses
 acaparador,-2,profiteer
@@ -1080,6 +1081,7 @@ exasperada,2,exasperated
 exasperante,-2,infuriating
 excelencia,3,excellence
 excelente,3,excellent
+excelentes,3,excellent
 excepcional,5,outstanding
 exceso de peso,-1,overweight
 excitar,3,excite
@@ -1581,7 +1583,7 @@ litigioso,-2,litigious
 lívido,-2,livid
 llanto,-2,weeping
 llantos,-2,cries
-llegar,1,reaching
+llegar,0,reaching
 lleno de alegría,4,overjoyed
 lleno de savia,-1,sappy
 llorado,-2,cried
@@ -2329,18 +2331,15 @@ terror,-3,terror
 tesoro,2,treasure
 tesoros,2,treasures
 tetas,-2,tits
-tiempo,-2,tense
+tiempo,0,tense
 tímido,-2,diffident
 tímido,-1,shy
 tímido,-2,timid
 timorato,-2,timorous
-tipo,2,kind
+tipo,0,kind
 tolerante,2,tolerant
 toma de posesión,-2,swearing
 tonto,-3,dumb
-tonto,-2,fool
-tonto,-2,foolish
-tonto,-1,silly
 tontos,-2,fools
 torpe,-2,awkward
 tortura,-4,torture
@@ -2455,7 +2454,7 @@ violar,-2,violate
 violar,-2,violating
 violencia,-3,violence
 violento,-3,violent
-violación
+violación,-4,violent
 virtuoso,2,virtuous
 virulento,-2,virulent
 visión,1,vision
