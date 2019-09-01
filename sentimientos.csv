@@ -515,6 +515,7 @@ cometer,1,commit
 comodidad,2,comfort
 comodidad,2,coziness
 comodidades,2,comforts
+cómodos,2,comfortable
 cómodo,2,comfortable
 compadecimos,-1,pitied
 Comparte,1,shares
@@ -1224,6 +1225,7 @@ fumante,-2,fuming
 funeral,-1,funeral
 funerales,-1,funerals
 furioso,-3,furious
+furiosos,-3,furious
 furtivo,-1,sneaky
 fútil,2,futile
 galante,3,gallant
@@ -1627,6 +1629,7 @@ malhumorado,-2,mumpish
 malhumorado,-2,sulky
 malinterpretado,-2,misinterpreted
 malo,-3,bad
+malos,-3,bad
 malvado,-2,wicked
 mancha,2,slick
 manifestantes,-2,protesters
@@ -1735,6 +1738,7 @@ muriendo de hambre,-2,starving
 murió,-3,died
 musaraña,-4,shrew
 muy bueno,4,very good
+buenos,2,good
 n00b,-2,n00b
 natural,1,natural
 necesitado,-2,needy
@@ -2202,6 +2206,8 @@ simpatía,2,sympathy
 simpático,2,sympathetic
 simplificada,-2,oversimplified
 simplificar demasiado,-2,oversimplify
+demasiados,-1,over
+demasiado,-1,over
 sin acreditar,-1,uncredited
 sin amor,-2,unloved
 sin ánimo,-2,spiritless
