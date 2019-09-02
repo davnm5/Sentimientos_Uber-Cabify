@@ -9,7 +9,7 @@ library(dplyr)
 download.file("https://raw.githubusercontent.com/davnm5/Sentimientos_Uber-Cabify/master/sentimientos.csv?token=AGAFQW7UAEOB7EHL7SC7GAK5OK77W","sentimientos.csv")
 afinn <- read.csv("sentimientos.csv", stringsAsFactors = F, fileEncoding = "utf-8") %>% tbl_df()
 
-archivos=read.csv("config/config.csv")
+archivos=read.csv("../fase1-Python/config/config.csv")
 ubicacion=archivos$ubicacion
 app=archivos$app
 contador=0
