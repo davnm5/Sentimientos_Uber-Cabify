@@ -6,10 +6,20 @@ const bodyParser = require('body-parser');
 const fs = require('fs');
 
 
+
 router.get('/wordcloud/positivas',function(req,res){
   fs.readFile("../output/wordcloud_positivas.csv", {encoding: 'utf-8'}, function(err,data){
     if (!err) {
         res.send(data);
+    } else {
+        console.log(err);
+    }
+});
+});
+router.get('/mapas',function(req,res){
+  fs.readFile("../output/output.csv", {encoding: 'utf-8'}, function(err,data){
+    if (!err) {
+        res.send(data);    
     } else {
         console.log(err);
     }
@@ -29,6 +39,9 @@ router.get('/wordcloud/negativas',function(req,res){
 
 router.get('/wordcloud',function(req,res){
   res.sendFile(path.join(__dirname+'/wordcloud.html'));
+});
+router.get('/mapa',function(req,res){
+  res.sendFile(path.join(__dirname+'/mapa.html'));
 });
 
 app.use('/css',express.static('css'));

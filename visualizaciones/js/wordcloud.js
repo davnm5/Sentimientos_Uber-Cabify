@@ -32,6 +32,7 @@ var request = new XMLHttpRequest();
   request2.send();
 });
 
+
 function crearChart(name){
   var chart = am4core.create(name, am4plugins_wordCloud.WordCloud);
   var series = chart.series.push(new am4plugins_wordCloud.WordCloudSeries());
