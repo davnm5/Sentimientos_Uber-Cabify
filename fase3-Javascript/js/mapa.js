@@ -45,10 +45,10 @@ polygonTemplate.stroke = am4core.color("#ffffff");
 polygonTemplate.fillOpacity = 0.5;
 polygonTemplate.tooltipText = "{name}";
 
-polygonTemplate.events.on("hit", function(ev) {
-   // get object info
-  console.log(ev.target.dataItem.dataContext.name);
-});
+// polygonTemplate.events.on("hit", function(ev) {
+//    // get object info
+//   console.log(ev.target.dataItem.dataContext.name);
+// });
 
 // desaturate filter for countries
 var desaturateFilter = new am4core.DesaturateFilter();
@@ -64,11 +64,7 @@ polygonTemplate.adapter.add("fill", function (fill, target) {
 var hoverState = polygonTemplate.states.create("hover");
 hoverState.properties.fillOpacity = 1;
 
-// what to do when country is clicked
-polygonTemplate.events.on("hit", function (event) {
-    event.target.zIndex = 1000000;
-    selectPolygon(event.target);
-})
+
 
 // Pie chart
 var pieChart = chart.seriesContainer.createChild(am4charts.PieChart);
@@ -134,11 +130,34 @@ countryLabel.paddingRight = 50;
 countryLabel.hide(0);
 countryLabel.show();
 
+
+// what to do when country is clicked
+polygonTemplate.events.on("hit", function (event) {
+    event.target.zIndex = 1000000;
+    selectPolygon(event.target);
+    fetch('http://localhost:3000/mapas').then(function(response) {
+    return response.text();
+    }).then(function(text) {
+        var lines=text.split("\n");
+        for(var i=1;i<lines.length;i++){
+            var currentline=lines[i].split(",");
+            if (currentline[0].toLowerCase() === event.target.dataItem.dataContext.name.toLowerCase() && currentline[4].toLowerCase().trim() ==="uber") {  
+                for (var j = 0; j < pieSeries.dataItems.length; j++) {
+                    var dataItem = pieSeries.dataItems.getIndex(j);      
+                    console.log(currentline[j+1])
+                    dataItem.value = currentline[j+1]
+                    console.log(dataItem.value)  
+                }
+            }
+        }
+    });
+});
 // select polygon
 function selectPolygon(polygon) {
     if (morphedPolygon != polygon) {
         var animation = pieSeries.hide();
         if (animation) {
+            
             animation.events.on("animationended", function () {
                 morphToCircle(polygon);
             })
@@ -179,7 +198,7 @@ function morphBack() {
 }
 
 function morphToCircle(polygon) {
-
+    
 
     var animationDuration = polygon.polygon.morpher.morphDuration;
     // if there is a country already morphed to circle, morph it back
@@ -208,6 +227,7 @@ function morphToCircle(polygon) {
     countryLabel.hide();
 
     if (morphAnimation) {
+        
         morphAnimation.events.on("animationended", function () {
             zoomToCountry(polygon);
         })
@@ -217,20 +237,8 @@ function morphToCircle(polygon) {
     }
 }
 
-function zoomToCountry(polygon) {
-    var zoomAnimation = chart.zoomToMapObject(polygon, 2.2, true);
-    if (zoomAnimation) {
-        zoomAnimation.events.on("animationended", function () {
-            showPieChart(polygon);
-        })
-    }
-    else {
-        showPieChart(polygon);
-    }
-}
-
-
 function showPieChart(polygon) {
+    
     polygon.polygon.measure();
     var radius = polygon.polygon.measuredWidth / 2 * polygon.globalScale / chart.seriesContainer.scale;
     pieChart.width = radius * 2;
@@ -245,42 +253,30 @@ function showPieChart(polygon) {
 
     var fill = polygon.fill;
     var desaturated = fill.saturate(0.3);
-    var request = new Request('http://localhost:3000/mapas');
-    fetch(request).then(function(response) {
-    return response.text();
-    }).then(function(text) {
-        var lines=text.split("\n");
-        for(var i=1;i<lines.length;i++){
-            var currentline=lines[i].split(",");
-        
-            if (currentline[0].localeCompare("Colombia") == false) {
-                console.log(currentline[0])
-                for (var j = 0; j < pieSeries.dataItems.length; j++) {
-                    var dataItem = pieSeries.dataItems.getIndex(j);
-                    
-            
-                    dataItem.value = currentline[j+1]
-                    console.log(dataItem.value)
-                    dataItem.slice.fill = am4core.color(am4core.colors.interpolate(
-                        fill.rgb,
-                        am4core.color("#ffffff").rgb,
-                        0.2 * j
-                    ));
-            
-                    dataItem.label.background.fill = desaturated;
-                    dataItem.tick.stroke = fill;
-                }
-            }
-        }
-    });
-
+    
 
     pieSeries.show();
     pieChart.show();
 
     countryLabel.text = "{name}";
-    console.log(countryLabel.text)
     countryLabel.dataItem = polygon.dataItem;
     countryLabel.fill = desaturated;
     countryLabel.show();
 }
+
+function zoomToCountry(polygon) {
+    
+    var zoomAnimation = chart.zoomToMapObject(polygon, 2.2, true);
+    if (zoomAnimation) {
+        
+        zoomAnimation.events.on("animationended", function () {
+            showPieChart(polygon);
+        })
+    }
+    else {
+        showPieChart(polygon);
+    }
+}
+
+
+
