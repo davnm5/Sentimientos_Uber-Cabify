@@ -1,0 +1,33 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1567382343305.000,
+    "dirty" : false,
+    "encoding" : "",
+    "folds" : "",
+    "hash" : "0",
+    "id" : "1059952A",
+    "lastKnownWriteTime" : 1567382303,
+    "last_content_update" : 1567382343305,
+    "path" : null,
+    "project_path" : null,
+    "properties" : {
+        "cacheKey" : "13AA4D0B",
+        "caption" : "positivas",
+        "contentUrl" : "grid_resource/gridviewer.html?env=&obj=positivas&cache_key=13AA4D0B",
+        "displayedObservations" : 29,
+        "environment" : "",
+        "expression" : "positivas",
+        "object" : "positivas",
+        "preview" : 0,
+        "totalObservations" : 29,
+        "variables" : 1
+    },
+    "read_only" : false,
+    "read_only_alternatives" : [
+    ],
+    "relative_order" : 2,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_dataframe"
+}
