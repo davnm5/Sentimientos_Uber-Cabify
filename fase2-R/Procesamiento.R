@@ -1,7 +1,4 @@
 library("tm")
-library("SnowballC")
-library("wordcloud")
-library("RColorBrewer")
 library(tidyverse)
 library(tidytext)
 library(dplyr)
@@ -22,7 +19,8 @@ write.table(t2,"output/wordcloud_positivas.csv",quote=FALSE,row.names = FALSE,co
 write.table(t3,"output/wordcloud_negativas.csv",quote=FALSE,row.names = FALSE,col.names = TRUE,append = FALSE,sep=",")
 
 for (i in archivos$archivo){
-tuits <- read_csv2(i, quote = "\"", col_names = FALSE) %>% tbl_df()
+h=paste("../fase1-Python/",i,sep="")
+tuits <- read_csv2(h, quote = "\"", col_names = FALSE) %>% tbl_df()
 names(tuits) <-c("tuits")
 
 tuits <- tibble::rowid_to_column(tuits, "ID")
