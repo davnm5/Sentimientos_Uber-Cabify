@@ -37,7 +37,7 @@ def get_tweets(datos,zona):
 
 
 def init():
-    file=open("data.csv")
+    file=open("config/config.csv")
     file.readline().strip()
 
     for i in file:
