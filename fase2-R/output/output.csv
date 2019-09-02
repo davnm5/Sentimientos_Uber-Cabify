@@ -1,8 +1,8 @@
 ubicacion,positivos,negativos,neutros,app
 ---,---,---,---,---
-Mexico,36,82,82,uber
-Monterrey,39,76,85,uber
-Bogota,30,43,62,uber
-Bogota,10,13,8,cabify
-Colombia,29,43,60,uber
-Mexico,13,34,28,cabify
+Mexico,31,84,85,uber
+Monterrey,33,79,88,uber
+Bogota,21,50,64,uber
+Bogota,8,14,9,cabify
+Colombia,21,49,62,uber
+Mexico,9,39,27,cabify
