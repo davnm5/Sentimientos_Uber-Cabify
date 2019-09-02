@@ -836,7 +836,7 @@ calmante,3,soothing
 
 calmar,3,soothe
 
-calor,2,warmth
+calor,0,armth
 
 cancela,-1,cancels
 
@@ -2534,8 +2534,6 @@ groserias,-3,blank
 
 groseros,-3,blank
 
-Gracias,2,thanks
-
 gracioso,4,funny
 
 grande,1,big
@@ -2808,8 +2806,6 @@ incrédulo,-1,unbelieving
 
 increíble,4,awesome
 
-increíble,-1,unbelievable
-
 incrementar,1,increase
 
 incumplida,-2,unfulfilled
@@ -3032,7 +3028,7 @@ irresistible,2,irresistible
 
 irresoluto,-2,irresolute
 
-irresponsable,2,irresponsible
+irresponsable,-3,irresponsible
 
 irreversible,-1,irreversible
 
@@ -4782,43 +4778,31 @@ unificada,1,unified
 
 unirse,1,join
 
-urgente,-1,urgent
+urgente,-2,rgent
 
 útil,2,useful
 
 utilidad,2,usefulness
 
-urgente,-2,blank
-
 vacilante,-2,hesitant
-
-vacilante,-1,wavering
 
 vacilar,-2,hesitate
 
 vacío,-1,emptiness
 
-vacío,-1,empty
-
 vago,-2,vague
 
-valida,1,validates
+valida,-1,validates
 
 validado,1,validated
 
-validar,1,validate
-
-validar,1,validating
+validar,-1,validate
 
 valiente,2,brave
-
-valiente,2,courageous
 
 valientemente,2,boldly
 
 valor,2,courage
-
-valor,2,worth
 
 vano,-2,wasted
 
