@@ -17,7 +17,7 @@ router.get('/wordcloud/positivas',function(req,res){
 });
 });
 router.get('/mapas',function(req,res){
-  fs.readFile("../output/output.csv", {encoding: 'utf-8'}, function(err,data){
+  fs.readFile("../fase2-R/output/output.csv", {encoding: 'utf-8'}, function(err,data){
     if (!err) {
         res.send(data);    
     } else {
