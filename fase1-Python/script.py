@@ -24,7 +24,7 @@ api = tweepy.API(auth,wait_on_rate_limit=True)
 
 
 def get_tweets(datos,zona):
-    tweets = tweepy.Cursor(api.search, q=datos[1], geocode=str(zona[0])+","+str(zona[1])+","+str(datos[3]), lang ="es",tweet_mode='extended').items(200)
+    tweets = tweepy.Cursor(api.search, q=datos[1], geocode=str(zona[0])+","+str(zona[1])+","+str(datos[3]), lang ="es",tweet_mode='extended').items(300)
     with open(datos[0], 'w+') as f:
         for tweet in tweets:
             status = api.get_status(tweet.id,tweet_mode="extended")

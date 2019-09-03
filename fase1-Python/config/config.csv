@@ -1,7 +1,11 @@
 archivo,cuenta,ubicacion,superficie,app
+tweets/cabify_mexico.csv,@Cabify_Mexico,Mexico,50000km,cabify
+tweets/cabify_bogota.csv,@cabify_colombia,Bogota,619km,cabify
 tweets/uber_ciudadMexico.csv,@Uber_MEX,Mexico,1485km,uber
 tweets/uber_monterrey.csv,@Uber_MEX,Monterrey,894km,uber
 tweets/uber_bogota.csv,@Uber_Col,Bogota,1775km,uber
-tweets/cabify_bogota.csv,@cabify_colombia,Bogota,619km,cabify
 tweets/uber_colombia.csv,@Uber_Col,Colombia,50000km,uber
-tweets/cabify_mexico.csv,@Cabify_Mexico,Mexico,50000km,cabify
+tweets/uber_ecuador.csv,@Uber_Ecuador,Ecuador,50000km,uber
+tweets/uber_chile.csv,@Uber_Chile,Chile,50000km,uber
+tweets/uber_argentina.csv,@Uber_ARG,Argentina,50000km,uber
+tweets/uber_uruguay.csv,@Uber_UY,Uruguay,50000km,uber
