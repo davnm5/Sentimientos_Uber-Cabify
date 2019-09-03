@@ -97,7 +97,7 @@ router.get('/wordcloud_cabify', function (req, res) {
   res.sendFile(path.join(__dirname + '/wordcloud_cabify.html'));
 });
 
-router.get('/index', function (req, res) {
+router.get('/', function (req, res) {
   res.sendFile(path.join(__dirname + '/index.html'));
 });
 

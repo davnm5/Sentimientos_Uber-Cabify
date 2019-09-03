@@ -13,10 +13,6 @@ body {
   .titulo{
     text-align: center;
   }
-<<<<<<< HEAD
-  .formato{
-  padding: 80px 100px 80px 350px;
-=======
 
   #chartdiv {
     width:100%;
@@ -25,5 +21,8 @@ body {
   #chartdiv2 {
     width:100%;
     height: 500px;
->>>>>>> 59bd3354e951f196af7c0e6917f24e8873d205d1
+  }
+
+  .formato{
+    padding: 80px 100px 80px 350px;
   }
