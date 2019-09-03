@@ -26,6 +26,33 @@ router.get('/mapas',function(req,res){
 });
 });
 
+router.get('/api/radar/:polaridad',function(req,res){
+  fs.readFile("../fase2-R/output/output.csv", {encoding: 'utf-8'}, function(err,data){
+    if (!err) {
+      var lines=data.split("\n");
+      var result = [];
+      var headers=lines[0].split(",");
+      
+      for(var i=2;i<lines.length-1;i++){
+        var obj = {};
+        var currentline=lines[i].split(",");
+       
+        for(var j=0;j<headers.length;j++){
+          if(headers[j].toLowerCase().trim() === req.params.polaridad){          
+            obj[headers[j]] = currentline[j];
+            obj[headers[0]] = currentline[0];
+            
+            obj["app"] = currentline[4];
+          } 
+        }
+        result.push(obj);
+      }
+      res.send(JSON.stringify(result)); //JSON
+    } else {
+        console.log(err);
+    }
+});
+});
 
 router.get('/wordcloud/negativas',function(req,res){
   fs.readFile("../fase2-R/output/wordcloud_negativas.csv", {encoding: 'utf-8'}, function(err,data){
@@ -42,6 +69,9 @@ router.get('/wordcloud',function(req,res){
 });
 router.get('/mapa',function(req,res){
   res.sendFile(path.join(__dirname+'/mapa.html'));
+});
+router.get('/radar',function(req,res){
+  res.sendFile(path.join(__dirname+'/radar.html'));
 });
 
 app.use('/css',express.static('css'));
