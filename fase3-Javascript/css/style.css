@@ -13,3 +13,6 @@ body {
   .titulo{
     text-align: center;
   }
+  .formato{
+  padding: 80px 100px 80px 350px;
+  }

@@ -1,0 +1,33 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1567533483658.000,
+    "dirty" : false,
+    "encoding" : "",
+    "folds" : "",
+    "hash" : "0",
+    "id" : "C2427FA",
+    "lastKnownWriteTime" : 8463427232817114985,
+    "last_content_update" : 1567533483658,
+    "path" : null,
+    "project_path" : null,
+    "properties" : {
+        "cacheKey" : "A28B8618",
+        "caption" : "tuits",
+        "contentUrl" : "grid_resource/gridviewer.html?env=&obj=tuits&cache_key=A28B8618",
+        "displayedObservations" : 28,
+        "environment" : "",
+        "expression" : "tuits",
+        "object" : "tuits",
+        "preview" : 0,
+        "totalObservations" : 28,
+        "variables" : 3
+    },
+    "read_only" : false,
+    "read_only_alternatives" : [
+    ],
+    "relative_order" : 5,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_dataframe"
+}

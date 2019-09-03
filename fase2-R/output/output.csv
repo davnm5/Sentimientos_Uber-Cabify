@@ -1,10 +1,11 @@
 ubicacion,positivos,negativos,neutros,app
 ---,---,---,---,---
-Mexico,8,48,33,cabify
-Bogota,7,9,19,cabify
-Mexico,60,92,148,uber
-Monterrey,61,93,146,uber
-Bogota,21,44,51,uber
+Ecuador,2,36,14,cabify
+Chile,14,25,39,cabify
+Argentina,2,8,20,cabify
+Mexico,8,51,38,cabify
+Colombia,7,8,20,cabify
+Mexico,61,117,122,uber
 Colombia,21,50,61,uber
 Ecuador,31,82,90,uber
 Chile,48,101,117,uber
