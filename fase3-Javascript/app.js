@@ -73,6 +73,9 @@ router.get('/mapa',function(req,res){
 router.get('/radar',function(req,res){
   res.sendFile(path.join(__dirname+'/radar.html'));
 });
+router.get('/mapacabify',function(req,res){
+  res.sendFile(path.join(__dirname+'/mapacabify.html'));
+});
 
 app.use('/css',express.static('css'));
 app.use('/js',express.static('js'));
