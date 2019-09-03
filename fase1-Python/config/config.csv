@@ -3,10 +3,8 @@ tweets/cabify_ecuador.txt,@cabify_ecuador,Ecuador,50000km,cabify
 tweets/cabify_chile.txt,@Cabify_Chile,Chile,50000km,cabify
 tweets/cabify_argentina.txt,@cabify_arg,Argentina,50000km,cabify
 tweets/cabify_mexico.txt,@Cabify_Mexico,Mexico,50000km,cabify
-tweets/cabify_bogota.txt,@cabify_colombia,Bogota,619km,cabify
-tweets/uber_ciudadMexico.txt,@Uber_MEX,Ciudad de Mexico,1485km,uber
-tweets/uber_monterrey.txt,@Uber_MEX,Monterrey,894km,uber
-tweets/uber_bogota.txt,@Uber_Col,Bogota,1775km,uber
+tweets/cabify_colombia.txt,@cabify_colombia,Colombia,619km,cabify
+tweets/uber_mexico.txt,@Uber_MEX,Mexico,50000km,uber
 tweets/uber_colombia.txt,@Uber_Col,Colombia,50000km,uber
 tweets/uber_ecuador.txt,@Uber_Ecuador,Ecuador,50000km,uber
 tweets/uber_chile.txt,@Uber_Chile,Chile,50000km,uber
