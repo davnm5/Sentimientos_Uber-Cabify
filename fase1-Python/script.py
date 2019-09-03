@@ -15,7 +15,6 @@ def remove_emoji(text):
 
 consumer_key = 'SzaxB5ndFyLPlDULWTjpalsRR'
 consumer_secret = 'E4F2GzYB7QNHRFoq1WPzYSDyqShjHo4Xm5sniDll60yZo5XzZD'
-
 access_token  = '1159586127512317952-KnrBcec1geGVS9faGpQMAFJ4lXW1q7'
 access_token_secret = 'GKeHXjDXQRWERGR5N3w0QrNBtj2vXWOu3wYgNSnu6a6E0'
 auth = tweepy.OAuthHandler(consumer_key,  consumer_secret)

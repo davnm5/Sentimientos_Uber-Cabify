@@ -17,10 +17,10 @@ t4=data.frame(palabra=c("---"))
 t5=data.frame(palabra=c("---"))
 
 write.table(t,"output/output.csv",quote=FALSE,row.names = FALSE,col.names = TRUE,append = FALSE,sep=",")
-write.table(t2,"output/wordcloud_positivas_uber.csv",quote=FALSE,row.names = FALSE,col.names = TRUE,append = FALSE,sep=",")
-write.table(t3,"output/wordcloud_negativas_uber.csv",quote=FALSE,row.names = FALSE,col.names = TRUE,append = FALSE,sep=",")
-write.table(t4,"output/wordcloud_positivas_cabify.csv",quote=FALSE,row.names = FALSE,col.names = TRUE,append = FALSE,sep=",")
-write.table(t5,"output/wordcloud_negativas_cabify.csv",quote=FALSE,row.names = FALSE,col.names = TRUE,append = FALSE,sep=",")
+write.table(t2,"output/wordcloud_positivas_uber.txt",quote=FALSE,row.names = FALSE,col.names = TRUE,append = FALSE,sep=",")
+write.table(t3,"output/wordcloud_negativas_uber.txt",quote=FALSE,row.names = FALSE,col.names = TRUE,append = FALSE,sep=",")
+write.table(t4,"output/wordcloud_positivas_cabify.txt",quote=FALSE,row.names = FALSE,col.names = TRUE,append = FALSE,sep=",")
+write.table(t5,"output/wordcloud_negativas_cabify.txt",quote=FALSE,row.names = FALSE,col.names = TRUE,append = FALSE,sep=",")
 
 for (i in archivos$archivo){
 h=paste("../fase1-Python/",i,sep="")
@@ -53,14 +53,14 @@ tuits <-
 if(app[contador_app]=="uber"){
   positivas_uber=tuits_afinn[tuits_afinn$Puntuacion>0,1]
   negativas_uber=tuits_afinn[tuits_afinn$Puntuacion<0,1]
-  write.table(positivas_uber,"output/wordcloud_positivas_uber.csv",row.names = FALSE,col.names = FALSE,quote=FALSE,fileEncoding ="utf-8",append = TRUE,sep=",")
-  write.table(negativas_uber,"output/wordcloud_negativas_uber.csv",row.names = FALSE,col.names = FALSE,quote=FALSE,fileEncoding ="utf-8",append = TRUE,sep=",")
+  write.table(positivas_uber,"output/wordcloud_positivas_uber.txt",row.names = FALSE,col.names = FALSE,quote=FALSE,fileEncoding ="utf-8",append = TRUE,sep=",")
+  write.table(negativas_uber,"output/wordcloud_negativas_uber.txt",row.names = FALSE,col.names = FALSE,quote=FALSE,fileEncoding ="utf-8",append = TRUE,sep=",")
 }
 else{
   positivas_cabify=tuits_afinn[tuits_afinn$Puntuacion>0,1]
   negativas_cabify=tuits_afinn[tuits_afinn$Puntuacion<0,1]
-  write.table(positivas_cabify,"output/wordcloud_positivas_cabify.csv",row.names = FALSE,col.names = FALSE,quote=FALSE,fileEncoding ="utf-8",append = TRUE,sep=",")
-  write.table(negativas_cabify,"output/wordcloud_negativas_cabify.csv",row.names = FALSE,col.names = FALSE,quote=FALSE,fileEncoding ="utf-8",append = TRUE,sep=",")
+  write.table(positivas_cabify,"output/wordcloud_positivas_cabify.txt",row.names = FALSE,col.names = FALSE,quote=FALSE,fileEncoding ="utf-8",append = TRUE,sep=",")
+  write.table(negativas_cabify,"output/wordcloud_negativas_cabify.txt",row.names = FALSE,col.names = FALSE,quote=FALSE,fileEncoding ="utf-8",append = TRUE,sep=",")
 }
 contador_app=contador_app+1
 

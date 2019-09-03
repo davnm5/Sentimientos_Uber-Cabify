@@ -2,18 +2,18 @@
     "collab_server" : "",
     "contents" : "",
     "created" : 1567438440669.000,
-    "dirty" : true,
+    "dirty" : false,
     "encoding" : "UTF-8",
     "folds" : "",
-    "hash" : "0",
+    "hash" : "739826644",
     "id" : "EC67A216",
-    "lastKnownWriteTime" : 1567541637,
-    "last_content_update" : 1567541666061,
+    "lastKnownWriteTime" : 1567546771,
+    "last_content_update" : 1567546771950,
     "path" : "D:/Sentimientos_Uber-Cabify/fase2-R/Procesamiento.R",
     "project_path" : "Procesamiento.R",
     "properties" : {
-        "cursorPosition" : "57,1",
-        "scrollLine" : "48"
+        "cursorPosition" : "63,1",
+        "scrollLine" : "28"
     },
     "read_only" : false,
     "read_only_alternatives" : [
