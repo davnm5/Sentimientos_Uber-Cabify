@@ -8,7 +8,7 @@ const fs = require('fs');
 
 
 router.get('/wordcloud/positivas',function(req,res){
-  fs.readFile("../fase2-R/output/wordcloud_positivas.csv", {encoding: 'utf-8'}, function(err,data){
+  fs.readFile("../fase2-R/output/wordcloud_positivas.txt", {encoding: 'utf-8'}, function(err,data){
     if (!err) {
         res.send(data);
     } else {
@@ -55,7 +55,7 @@ router.get('/api/radar/:polaridad',function(req,res){
 });
 
 router.get('/wordcloud/negativas',function(req,res){
-  fs.readFile("../fase2-R/output/wordcloud_negativas.csv", {encoding: 'utf-8'}, function(err,data){
+  fs.readFile("../fase2-R/output/wordcloud_negativas.txt", {encoding: 'utf-8'}, function(err,data){
     if (!err) {
         res.send(data);
     } else {

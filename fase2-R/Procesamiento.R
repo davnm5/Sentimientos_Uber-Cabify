@@ -15,8 +15,8 @@ t2=data.frame(palabra=c("---"))
 t3=data.frame(palabra=c("---"))
 
 write.table(t,"output/output.csv",quote=FALSE,row.names = FALSE,col.names = TRUE,append = FALSE,sep=",")
-write.table(t2,"output/wordcloud_positivas.csv",quote=FALSE,row.names = FALSE,col.names = TRUE,append = FALSE,sep=",")
-write.table(t3,"output/wordcloud_negativas.csv",quote=FALSE,row.names = FALSE,col.names = TRUE,append = FALSE,sep=",")
+write.table(t2,"output/wordcloud_positivas.txt",quote=FALSE,row.names = FALSE,col.names = TRUE,append = FALSE,sep=",")
+write.table(t3,"output/wordcloud_negativas.txt",quote=FALSE,row.names = FALSE,col.names = TRUE,append = FALSE,sep=",")
 
 for (i in archivos$archivo){
 h=paste("../fase1-Python/",i,sep="")
@@ -58,8 +58,8 @@ count.duplicates = function(DF){
 positivas=tuits_afinn[tuits_afinn$Puntuacion>0,1]
 negativas=tuits_afinn[tuits_afinn$Puntuacion<0,1]
 
-write.table(positivas,"output/wordcloud_positivas.csv",row.names = FALSE,col.names = FALSE,quote=FALSE,fileEncoding ="utf-8",append = TRUE,sep=",")
-write.table(negativas,"output/wordcloud_negativas.csv",row.names = FALSE,col.names = FALSE,quote=FALSE,fileEncoding ="utf-8",append = TRUE,sep=",")
+write.table(positivas,"output/wordcloud_positivas.txt",row.names = FALSE,col.names = FALSE,quote=FALSE,fileEncoding ="utf-8",append = TRUE,sep=",")
+write.table(negativas,"output/wordcloud_negativas.txt",row.names = FALSE,col.names = FALSE,quote=FALSE,fileEncoding ="utf-8",append = TRUE,sep=",")
 
 
 tuits[is.na(tuits)] <- 0
