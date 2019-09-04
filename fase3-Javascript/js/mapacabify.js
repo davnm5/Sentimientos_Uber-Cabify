@@ -138,6 +138,10 @@ polygonTemplate.events.on("hit", function (event) {
     fetch('http://localhost:3000/mapas').then(function(response) {
     return response.text();
     }).then(function(text) {
+        for (var k = 0; k < pieSeries.dataItems.length; k++) {
+            var dataItem = pieSeries.dataItems.getIndex(k);      
+            dataItem.value = 0
+        }
         var lines=text.split("\n");
         for(var i=1;i<lines.length;i++){
             var currentline=lines[i].split(",");
