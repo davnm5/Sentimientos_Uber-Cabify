@@ -56,15 +56,15 @@ fetch('http://localhost:3000/api/radar/positivos').then(function(response) {
         series.dataFields.valueY = "cabify";
         series.dataFields.categoryX = "ubicacion";
         series.name = "a";
-        series.strokeWidth = 1;
-        series.fillOpacity = 0.1;
+        series.strokeWidth = 2;
+        series.fillOpacity = 0.5;
         
         var series2 = chart.series.push(new am4charts.RadarSeries());
         series2.dataFields.valueY = "uber";
         series2.dataFields.categoryX = "ubicacion";
         series2.name = "b";
         series2.strokeWidth = 1;
-        series2.stroke = am4core.color("#0066CC");
+        series2.stroke = am4core.color("green");
         series2.fill = am4core.color("red");
         series2.fillOpacity = 0.1;
 
@@ -128,15 +128,15 @@ fetch('http://localhost:3000/api/radar/negativos').then(function(response) {
         series3.dataFields.valueY = "cabify";
         series3.dataFields.categoryX = "ubicacion";
         series3.name = "a";
-        series3.strokeWidth = 1;
-        series3.fillOpacity = 0.1;
+        series3.strokeWidth = 2;
+        series3.fillOpacity = 0.5;
         
         var series4 = chart2.series.push(new am4charts.RadarSeries());
         series4.dataFields.valueY = "uber";
         series4.dataFields.categoryX = "ubicacion";
         series4.name = "b";
         series4.strokeWidth = 1;
-        series4.stroke = am4core.color("#0066CC");
+        series4.stroke = am4core.color("green");
         series4.fill = am4core.color("red");
         series4.fillOpacity = 0.1;
 
