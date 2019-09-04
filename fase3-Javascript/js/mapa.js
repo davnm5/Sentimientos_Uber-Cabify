@@ -36,7 +36,7 @@ var morphedPolygon;
 var polygonSeries = chart.series.push(new am4maps.MapPolygonSeries());
 polygonSeries.useGeodata = true;
 // specify which countries to include
-polygonSeries.include = ["AR", "BO", "BR", "CL", "CO", "EC", "FK", "GF", "GY", "PY", "PE", "SR", "UR", "MX", "PA"]
+polygonSeries.include = ["AR", "BO", "BR", "CL", "CO", "EC", "FK", "GF", "GY", "PY", "PE", "SR", "UR", "MX", "PA", "UY", "GT", "CR", "HN", "NI"]
 
 // country area look and behavior
 var polygonTemplate = polygonSeries.mapPolygons.template;
@@ -80,7 +80,7 @@ pieChart.chartContainer.minWidth = 1;
 var pieSeries = pieChart.series.push(new am4charts.PieSeries());
 pieSeries.dataFields.value = "value";
 pieSeries.dataFields.category = "category";
-pieSeries.data = [{ value: 100, category: "Positivo" }, { value: 20, category: "Negativo" }, { value: 10, category: "Neutro" }];
+pieSeries.data = [{ value: 0, category: "Positivo" }, { value: 0, category: "Negativo" }, { value: 100, category: "Neutro" }];
 
 var dropShadowFilter = new am4core.DropShadowFilter();
 dropShadowFilter.blur = 4;
@@ -144,7 +144,6 @@ polygonTemplate.events.on("hit", function (event) {
             if (currentline[0].toLowerCase() === event.target.dataItem.dataContext.name.toLowerCase() && currentline[4].toLowerCase().trim() ==="uber") {  
                 for (var j = 0; j < pieSeries.dataItems.length; j++) {
                     var dataItem = pieSeries.dataItems.getIndex(j);      
-                    console.log(currentline[j+1])
                     dataItem.value = currentline[j+1]
                     console.log(dataItem.value)  
                 }
