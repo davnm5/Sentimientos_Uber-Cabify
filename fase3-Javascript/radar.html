@@ -1,29 +1,70 @@
-
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <script src="https://www.amcharts.com/lib/4/core.js"></script>
-<script src="https://www.amcharts.com/lib/4/charts.js"></script>
-<script src="https://www.amcharts.com/lib/4/themes/animated.js"></script>
+    <script src="https://www.amcharts.com/lib/4/charts.js"></script>
+    <script src="https://www.amcharts.com/lib/4/themes/animated.js"></script>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
     <title>Radar</title>
 </head>
+
 <body>
+
+
     <h1 class="titulo">Radar Sentimientos Uber</h1>
-        <div id="chartdiv"></div>
-        <h1 class="titulo">Radar Sentimientos Cabify</h1>
-        <div id="chartdiv2"></div>
-        
 
-        <script src="js/radar.js"></script>
+    <div class="indicadores row">
+        <div class=" indicadores col-md-4">
 
+        </div>
+        <div class=" indicadores col-md-3">
+            <span class="indicadores dot-positivo"></span>
+            <p>Negativo</p>
+
+        </div>
+        <div class=" indicadores col-md-3">
+            <span class=" indicadores dot-negativo"></span>
+            <p>Positivo</p>
+        </div>
+        <div class=" indicadores col-md-2">
+
+        </div>
+    </div>
+    <div id="chartdiv"></div>
+
+
+    <h1 class="titulo">Radar Sentimientos Cabify</h1>
+    <div class="indicadores row">
+            <div class=" indicadores col-md-4">
     
+            </div>
+            <div class=" indicadores col-md-3">
+                <span class="indicadores dot-positivo"></span>
+                <p>Negativo</p>
+    
+            </div>
+            <div class=" indicadores col-md-3">
+                <span class=" indicadores dot-negativo"></span>
+                <p>Positivo</p>
+            </div>
+            <div class=" indicadores col-md-2">
+    
+            </div>
+        </div>
+
+    <div id="chartdiv2"></div>
+
+
+    <script src="js/radar.js"></script>
+
+
 </body>
+
 </html>
-
-
-

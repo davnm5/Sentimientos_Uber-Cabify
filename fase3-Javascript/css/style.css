@@ -12,6 +12,7 @@ body {
   }
   .titulo{
     text-align: center;
+    padding: 20px;
   }
 
   #chartdiv {
@@ -37,4 +38,27 @@ body {
     height: 100%;
     width: 100%;
     
+  }
+ 
+  .dot-positivo {
+    height: 15px;
+    width: 15px;
+    background-color: #ffb2ba;
+    border-radius: 50%;
+    display: inline-flex;
+    padding: 20px 10px 10px 10px;
+    text-align: center;
+  }
+  .dot-negativo {
+    height: 15px;
+    width: 15px;
+    background-color: dodgerblue;
+    border-radius: 50%;
+    display: inline-flex;
+    padding: 20px 10px 10px 10px;
+    text-align: center;
+  }
+
+  .indicadores{
+    padding: 10px 10px 10px 10px;
   }
