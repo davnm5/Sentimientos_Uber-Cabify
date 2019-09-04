@@ -19,26 +19,19 @@ var chart = am4core.create("chartdiv", am4charts.RadarChart);
 
 /* Add data */
 
-fetch('http://localhost:3000/api/radar/positivos').then(function(response) {
+fetch('http://localhost:3000/api/radar').then(function(response) {
     return response.text();
     }).then(function(text) {
         var objects = JSON.parse(text)
-        var uber = []
-        var cabify = []     
+        var uber = []   
         for (let index = 0; index < objects.length; index++) {        
             if(objects[index].app.trim() === "uber"){ 
                 uber.push(objects[index])
-            }else{
-                cabify.push(objects[index])
-            }  
+            }
         }
         var data = []
         for (let index = 0; index < uber.length; index++) { 
-            for (let index2 = 0; index2 < cabify.length; index2++) {
-                if(uber[index].ubicacion.trim() === cabify[index2].ubicacion.trim()){ 
-                    data.push( {"ubicacion" : uber[index].ubicacion , "uber": uber[index].positivos, "cabify": cabify[index2].positivos })  
-                }
-            }           
+            data.push( {"ubicacion" : uber[index].ubicacion , "positivos": uber[index].positivos, "negativos": uber[index].negativos })            
         }
         console.log(data)
         chart.data = data
@@ -53,14 +46,14 @@ fetch('http://localhost:3000/api/radar/positivos').then(function(response) {
 
         /* Create and configure series */
         var series = chart.series.push(new am4charts.RadarSeries());
-        series.dataFields.valueY = "cabify";
+        series.dataFields.valueY = "positivos";
         series.dataFields.categoryX = "ubicacion";
         series.name = "a";
         series.strokeWidth = 2;
         series.fillOpacity = 0.5;
         
         var series2 = chart.series.push(new am4charts.RadarSeries());
-        series2.dataFields.valueY = "uber";
+        series2.dataFields.valueY = "negativos";
         series2.dataFields.categoryX = "ubicacion";
         series2.name = "b";
         series2.strokeWidth = 1;
@@ -91,31 +84,24 @@ var chart2 = am4core.create("chartdiv2", am4charts.RadarChart);
 
 /* Add data */
 
-fetch('http://localhost:3000/api/radar/negativos').then(function(response) {
+fetch('http://localhost:3000/api/radar').then(function(response) {
     return response.text();
     }).then(function(text) {
         var objects = JSON.parse(text)
-        var uber = []
-        var cabify = []     
+        var cabify = []   
         for (let index = 0; index < objects.length; index++) {        
-            if(objects[index].app.trim() === "uber"){ 
-                uber.push(objects[index])
-            }else{
+            if(objects[index].app.trim() === "cabify"){ 
                 cabify.push(objects[index])
-            }  
+            }
         }
         var data = []
-        for (let index = 0; index < uber.length; index++) { 
-            for (let index2 = 0; index2 < cabify.length; index2++) {
-                if(uber[index].ubicacion.trim() === cabify[index2].ubicacion.trim()){ 
-                    data.push( {"ubicacion" : uber[index].ubicacion , "uber": uber[index].negativos, "cabify": cabify[index2].negativos })  
-                }
-            }           
+        for (let index = 0; index < cabify.length; index++) { 
+            data.push( {"ubicacion" : cabify[index].ubicacion , "positivos": cabify[index].positivos, "negativos": cabify[index].negativos })            
         }
         console.log(data)
         chart2.data = data
 
-        /* Create axes */
+        
         var categoryAxis = chart2.xAxes.push(new am4charts.CategoryAxis());
         categoryAxis.dataFields.category = "ubicacion";
 
@@ -123,16 +109,16 @@ fetch('http://localhost:3000/api/radar/negativos').then(function(response) {
         valueAxis.renderer.axisFills.template.fill = chart.colors.getIndex(2);
         valueAxis.renderer.axisFills.template.fillOpacity = 0.05;
 
-        /* Create and configure series */
+        
         var series3 = chart2.series.push(new am4charts.RadarSeries());
-        series3.dataFields.valueY = "cabify";
+        series3.dataFields.valueY = "positivos";
         series3.dataFields.categoryX = "ubicacion";
         series3.name = "a";
         series3.strokeWidth = 2;
         series3.fillOpacity = 0.5;
         
         var series4 = chart2.series.push(new am4charts.RadarSeries());
-        series4.dataFields.valueY = "uber";
+        series4.dataFields.valueY = "negativos";
         series4.dataFields.categoryX = "ubicacion";
         series4.name = "b";
         series4.strokeWidth = 1;

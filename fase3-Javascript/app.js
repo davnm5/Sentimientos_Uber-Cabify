@@ -59,7 +59,7 @@ router.get('/mapas', function (req, res) {
   });
 });
 
-router.get('/api/radar/:polaridad', function (req, res) {
+router.get('/api/radar', function (req, res) {
   fs.readFile("../fase2-R/output/output.csv", { encoding: 'utf-8' }, function (err, data) {
     if (!err) {
       var lines = data.split("\n");
@@ -70,13 +70,12 @@ router.get('/api/radar/:polaridad', function (req, res) {
         var obj = {};
         var currentline = lines[i].split(",");
 
-        for (var j = 0; j < headers.length; j++) {
-          if (headers[j].toLowerCase().trim() === req.params.polaridad) {
+        for (var j = 0; j < headers.length-2; j++) {
+         
             obj[headers[j]] = currentline[j];
-            obj[headers[0]] = currentline[0];
-
+            
             obj["app"] = currentline[4];
-          }
+          
         }
         result.push(obj);
       }
